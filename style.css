@@ -75,13 +75,12 @@ h1 span { background: linear-gradient(90deg, var(--accent), var(--accent-2)); -w
 .btn.primary:hover { box-shadow: 0 12px 36px rgba(124, 196, 255, .45); }
 
 /* Screenshot */
+.shot { display: flex; justify-content: center; margin-top: 72px; }
 .screenshot {
   display: block;
-  width: 100%;
-  max-width: 920px;
+  width: min(100%, 720px);
   height: auto;
-  margin: 56px auto 0;
-  border-radius: 18px 18px 0 0;
+  border-radius: 14px 14px 0 0;
   border: 1px solid var(--border);
   border-bottom: none;
   box-shadow: 0 -10px 80px rgba(124, 196, 255, .15), 0 30px 80px rgba(0, 0, 0, .5);
