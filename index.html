@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dazzle – an ultra-light operating system for Raspberry Pi</title>
+  <meta name="description" content="Dazzle is an ultra-light operating system for Raspberry Pi computers, made to run well on the smallest Pi, the Raspberry Pi Zero. Download it, browse the apps and get started.">
+  <meta property="og:title" content="Dazzle – an ultra-light operating system for Raspberry Pi">
+  <meta property="og:description" content="Runs well on the Raspberry Pi Zero. Download, flash and go.">
+  <meta property="og:image" content="https://dazzleos.org/assets/seashore.jpg">
+  <link rel="icon" href="assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="#top" id="brand"><img src="assets/logo.svg" alt="">Dazzle</a>
+      <nav>
+        <a href="#install" id="nav-install">Install</a>
+        <a href="#store" id="nav-store">Apps</a>
+        <a href="#guides" id="nav-guides">Guides</a>
+        <a href="https://github.com/dazzleos" id="nav-github">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div class="wrap">
+        <img class="logo" src="assets/logo.svg" alt="Dazzle logo">
+        <h1>A tiny OS with <span>a big picture</span></h1>
+        <p class="lead">Dazzle is an ultra-light operating system for Raspberry Pi computers. It is made to run well on the smallest, lowest-powered Pi: the Raspberry Pi Zero.</p>
+        <a class="btn primary" id="download" href="https://github.com/dazzleos/dazzle/releases/latest/download/dazzle.img.xz">Download Dazzle</a>
+        <a class="btn" href="#install" id="how-to-install">How to install</a>
+
+        <div class="desktop" role="img" aria-label="Dazzle running Files, Terminal, Globe and Text Editor">
+          <img class="w1" src="assets/store/dazzle-files-screenshot.png" alt="">
+          <img class="w3" src="assets/store/dazzle-maps-screenshot.png" alt="">
+          <img class="w2" src="assets/store/dazzle-terminal-screenshot.png" alt="">
+          <img class="w4" src="assets/store/dazzle-text-editor-screenshot.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="wrap">
+        <h2>Light, simple, yours</h2>
+        <p class="sub">Dazzle gives even a Pi Zero a smooth graphical desktop, with a small store of apps you can install from Settings.</p>
+        <div class="features">
+          <div class="card"><h3>Made for the Pi Zero</h3><p>Runs on Raspberry Pi 1–5 and the Zero, Zero W and Zero 2 W. An SD card of 256&nbsp;MB is enough.</p></div>
+          <div class="card"><h3>An app store</h3><p>Install apps from Settings → Software: files, camera, games, a terminal and more.</p></div>
+          <div class="card"><h3>Built-in networking</h3><p>Join Wi-Fi, use Ethernet, or turn the Pi into an access point and share its connection.</p></div>
+          <div class="card"><h3>Open source</h3><p>Written in Zig on top of Linux and the Raspberry Pi kernel. <a href="https://github.com/dazzleos/dazzle">See the code.</a></p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="install" class="alt">
+      <div class="wrap">
+        <h2>Install Dazzle</h2>
+        <p class="sub">It takes a few minutes: write the image to a microSD card, put it in your Pi and switch on.</p>
+
+        <h3>You will need</h3>
+        <ul class="needs">
+          <li>A Raspberry Pi (1–5, or Zero / Zero W / Zero 2 W)</li>
+          <li>A microSD card, 256&nbsp;MB or larger (<strong>everything on it will be erased</strong>)</li>
+          <li>An HDMI display (with a mini- or micro-HDMI adapter if your board needs one)</li>
+          <li>A USB keyboard and mouse, or a USB touchscreen (on the Zero, a micro-USB OTG adapter and hub)</li>
+          <li>Optional: a USB Ethernet adapter, or a Raspberry Pi Camera Module v1 or v2</li>
+        </ul>
+
+        <ol class="steps" style="margin-top:28px">
+          <li><h3>Download Dazzle</h3><p><a href="https://github.com/dazzleos/dazzle/releases/latest/download/dazzle.img.xz">dazzle.img.xz</a>. There is no need to unpack it.</p></li>
+          <li><h3>Open Raspberry Pi Imager</h3><p>Get it from <a href="https://www.raspberrypi.com/software/">raspberrypi.com/software</a>, then choose your device.</p></li>
+          <li><h3>Choose the image</h3><p>Under <span class="ui">Choose OS</span>, scroll to the bottom and pick <span class="ui">Use Custom</span>, then select the <code>dazzle.img.xz</code> you downloaded.</p></li>
+          <li><h3>Choose your microSD card</h3><p>Under <span class="ui">Choose Storage</span>, pick your card.</p></li>
+          <li><h3>Write it</h3><p>Click <span class="ui">Next</span>. When asked about OS customisation, choose <span class="ui">No</span>: Dazzle asks for its own settings when it starts.</p></li>
+          <li><h3>Boot</h3><p>Put the card in your Pi, connect the display and keyboard and mouse, and power it on.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="store">
+      <div class="wrap">
+        <h2>Apps</h2>
+        <p class="sub">Everything in the Dazzle store. On Dazzle, open <span class="ui">Settings → Software</span> to install any of these.</p>
+        <div class="store" id="store-list"><p class="loading" id="store-loading">Loading apps…</p></div>
+      </div>
+    </section>
+
+    <section id="guides" class="alt">
+      <div class="wrap">
+        <h2>Common tasks</h2>
+        <p class="sub">Short guides for things people do with Dazzle.</p>
+
+        <div class="card" id="guide-ap" style="background:var(--bg)">
+          <h3 style="font-size:1.4rem">Set up Dazzle as a Wi-Fi access point</h3>
+          <p style="margin-bottom:18px">Turn your Pi into a hotspot so phones and laptops can join it, and optionally share an Ethernet connection with them. Chat and Motu work between everyone on the same network, no internet needed.</p>
+          <ol class="steps">
+            <li><h3>Open Settings → Wi-Fi</h3><p>Your Pi needs a Wi-Fi adapter (built in on the Zero W, Zero 2 W, 3, 4 and 5).</p></li>
+            <li><h3>Set the mode to Access Point</h3><p>Press the <span class="ui">Mode</span> button and choose <span class="ui">Access Point</span>.</p></li>
+            <li><h3>Give it a name and password</h3><p>Enter a <span class="ui">Name</span> of 1–32 characters and a <span class="ui">Password</span> of 8–63 characters.</p></li>
+            <li><h3>Choose an upstream (optional)</h3><p>To share the internet, plug in an Ethernet cable and pick it as the <span class="ui">Upstream</span>. Leave it as <span class="ui">None</span> for a private network.</p></li>
+            <li><h3>Press Start</h3><p>The status shows <span class="ui">Active</span> and the <span class="ui">Clients</span> list fills as devices join. The hotspot's address is <code>192.168.4.1</code>.</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Dazzle is built on Linux, <a href="https://www.raspberrypi.com/">Raspberry Pi</a>, <a href="https://ziglang.org/">Zig</a> and <a href="https://m3.material.io/">Material Design</a>.</p>
+      <p><a href="https://github.com/dazzleos/dazzle">Source on GitHub</a> · <a href="https://github.com/dazzleos/dazzle/issues">Report an issue</a></p>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

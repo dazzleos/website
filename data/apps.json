@@ -1,0 +1,94 @@
+{
+  "apps": [
+    {
+      "name": "dazzle-camera",
+      "title": "Camera",
+      "description": "Take photos and videos",
+      "about": "Take photos and record videos with a Raspberry Pi camera module, with a live view to frame them. They are kept in your files, to see and share.",
+      "version": "04acbd4",
+      "size": 807544,
+      "icon": "assets/store/dazzle-camera.png",
+      "screenshot": "assets/store/dazzle-camera-screenshot.png"
+    },
+    {
+      "name": "dazzle-chat",
+      "title": "Chat",
+      "description": "Chat with others on your network in rooms",
+      "about": "Talk with others on the same network in rooms, without an account or the internet: anyone running Chat nearby can join.",
+      "version": "abc93c4",
+      "size": 328376,
+      "icon": "assets/store/dazzle-chat.png",
+      "screenshot": "assets/store/dazzle-chat-screenshot.png"
+    },
+    {
+      "name": "dazzle-develop",
+      "title": "Develop",
+      "description": "Write and run Zig programs",
+      "about": "Write programs in Zig and run them on this computer: an editor beside the output, with the Zig compiler built in.",
+      "version": "a7e33a5",
+      "size": 42099892,
+      "icon": "assets/store/dazzle-develop.png",
+      "screenshot": "assets/store/dazzle-develop-screenshot.png"
+    },
+    {
+      "name": "dazzle-files",
+      "title": "Files",
+      "description": "Browse your files",
+      "about": "Browse the files on this computer and on USB drives plugged into it: open them with the app that opens their kind, see photos, and make, rename, copy, move and delete files and folders.",
+      "version": "b9c18d1",
+      "size": 920628,
+      "icon": "assets/store/dazzle-files.png",
+      "screenshot": "assets/store/dazzle-files-screenshot.png"
+    },
+    {
+      "name": "dazzle-data-logger",
+      "title": "Geppetto",
+      "description": "Record inputs from the GPIO pins",
+      "about": "Record what the GPIO pins read over time, from buttons, switches and sensors, and see it drawn as a chart as it comes in.",
+      "version": "27c2bea",
+      "size": 343620,
+      "icon": "assets/store/dazzle-data-logger.png",
+      "screenshot": "assets/store/dazzle-data-logger-screenshot.png"
+    },
+    {
+      "name": "dazzle-maps",
+      "title": "Globe",
+      "description": "Explore the Earth on a 3D globe",
+      "about": "Explore the Earth on a 3D globe: spin it, zoom in to countries and see their names and borders.",
+      "version": "47600a5",
+      "size": 1183436,
+      "icon": "assets/store/dazzle-maps.png",
+      "screenshot": "assets/store/dazzle-maps-screenshot.png"
+    },
+    {
+      "name": "motu",
+      "title": "Motu",
+      "description": "Build islands out of blocks",
+      "about": "Build on a tropical atoll of blocks: shape the islands, build huts, paddle a canoe across the lagoon, and look out to sea with a telescope. Islands are kept between games, and friends on the same network can play on yours.",
+      "version": "5daaa37",
+      "size": 1916324,
+      "icon": "assets/store/motu.png",
+      "screenshot": "assets/store/motu-screenshot.png"
+    },
+    {
+      "name": "dazzle-terminal",
+      "title": "Terminal",
+      "description": "Run command-line tools",
+      "about": "Run command-line tools: look round the files, see what the system is doing, and try commands, in a terminal with its own shell.",
+      "version": "c219da4",
+      "size": 882408,
+      "icon": "assets/store/dazzle-terminal.png",
+      "screenshot": "assets/store/dazzle-terminal-screenshot.png"
+    },
+    {
+      "name": "dazzle-text-editor",
+      "title": "Text Editor",
+      "description": "Edit text files",
+      "about": "Write and edit plain text files: notes, lists, code and configuration. It opens text files from Files, and keeps what you write as you go.",
+      "version": "8a5037b",
+      "size": 325980,
+      "icon": "assets/store/dazzle-text-editor.png",
+      "screenshot": "assets/store/dazzle-text-editor-screenshot.png"
+    }
+  ]
+}

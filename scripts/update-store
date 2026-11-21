@@ -1,0 +1,23 @@
+#!/bin/sh
+# Refreshes data/apps.json and assets/store/ from Dazzle's store: the
+# catalogue Settings reads (dazzleos/store's "latest" release). Needs curl
+# and jq. Run by the Pages workflow on every deploy; run it by hand to
+# preview the Store page with current apps.
+set -eu
+cd "$(dirname "$0")/.."
+URL="${STORE_URL:-https://github.com/dazzleos/store/releases/latest/download/apps.json}"
+tmp=$(mktemp)
+trap 'rm -f "$tmp"' EXIT
+curl -fsSL "$URL" -o "$tmp"
+mkdir -p data assets/store
+rm -f assets/store/*
+jq -r '.apps[] | select(.language == "") | [.name, .base, .icon, .screenshot] | @tsv' "$tmp" |
+while IFS="	" read -r name base icon shot; do
+  [ -n "$icon" ] && curl -fsSL "$base/$icon" -o "assets/store/$name.png"
+  [ -n "$shot" ] && curl -fsSL "$base/$shot" -o "assets/store/$name-screenshot.png"
+done
+jq '{apps: [.apps[] | select(.language == "") | {name, title, description, about, version, size,
+  icon: (if .icon != "" then "assets/store/\(.name).png" else "" end),
+  screenshot: (if .screenshot != "" then "assets/store/\(.name)-screenshot.png" else "" end)}]
+  | sort_by(.title)}' "$tmp" > data/apps.json
+echo "Updated $(jq '.apps | length' data/apps.json) apps"
