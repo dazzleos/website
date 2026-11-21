@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dazzle – an ultra-light operating system for Raspberry Pi</title>
+  <title>Dazzle – a full OS for the smallest devices</title>
   <meta name="description" content="Dazzle is an ultra-light operating system for Raspberry Pi computers, made to run well on the smallest Pi, the Raspberry Pi Zero. Download it, browse the apps and get started.">
-  <meta property="og:title" content="Dazzle – an ultra-light operating system for Raspberry Pi">
+  <meta property="og:title" content="Dazzle – a full OS for the smallest devices">
   <meta property="og:description" content="Runs well on the Raspberry Pi Zero. Download, flash and go.">
-  <meta property="og:image" content="https://dazzleos.org/assets/seashore.jpg">
+  <meta property="og:image" content="https://dazzleos.org/assets/screenshot.jpg">
   <link rel="icon" href="assets/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,6 @@
       <nav>
         <a href="#install" id="nav-install">Install</a>
         <a href="#store" id="nav-store">Apps</a>
-        <a href="#guides" id="nav-guides">Guides</a>
         <a href="https://github.com/dazzleos" id="nav-github">GitHub</a>
       </nav>
     </div>
@@ -31,17 +30,12 @@
     <div class="hero">
       <div class="wrap">
         <img class="logo" src="assets/logo.svg" alt="Dazzle logo">
-        <h1>A tiny OS with <span>a big picture</span></h1>
+        <h1>A full OS for the <span>smallest devices</span></h1>
         <p class="lead">Dazzle is an ultra-light operating system for Raspberry Pi computers. It is made to run well on the smallest, lowest-powered Pi: the Raspberry Pi Zero.</p>
         <a class="btn primary" id="download" href="https://github.com/dazzleos/dazzle/releases/latest/download/dazzle.img.xz">Download Dazzle</a>
         <a class="btn" href="#install" id="how-to-install">How to install</a>
 
-        <div class="desktop" role="img" aria-label="Dazzle running Files, Terminal, Globe and Text Editor">
-          <img class="w1" src="assets/store/dazzle-files-screenshot.png" alt="">
-          <img class="w3" src="assets/store/dazzle-maps-screenshot.png" alt="">
-          <img class="w2" src="assets/store/dazzle-terminal-screenshot.png" alt="">
-          <img class="w4" src="assets/store/dazzle-text-editor-screenshot.png" alt="">
-        </div>
+        <img class="screenshot" src="assets/screenshot.jpg" width="1920" height="1080" alt="Dazzle running Motu, Text Editor, Settings and Files">
       </div>
     </div>
 
@@ -88,25 +82,6 @@
         <h2>Apps</h2>
         <p class="sub">Everything in the Dazzle store. On Dazzle, open <span class="ui">Settings → Software</span> to install any of these.</p>
         <div class="store" id="store-list"><p class="loading" id="store-loading">Loading apps…</p></div>
-      </div>
-    </section>
-
-    <section id="guides" class="alt">
-      <div class="wrap">
-        <h2>Common tasks</h2>
-        <p class="sub">Short guides for things people do with Dazzle.</p>
-
-        <div class="card" id="guide-ap" style="background:var(--bg)">
-          <h3 style="font-size:1.4rem">Set up Dazzle as a Wi-Fi access point</h3>
-          <p style="margin-bottom:18px">Turn your Pi into a hotspot so phones and laptops can join it, and optionally share an Ethernet connection with them. Chat and Motu work between everyone on the same network, no internet needed.</p>
-          <ol class="steps">
-            <li><h3>Open Settings → Wi-Fi</h3><p>Your Pi needs a Wi-Fi adapter (built in on the Zero W, Zero 2 W, 3, 4 and 5).</p></li>
-            <li><h3>Set the mode to Access Point</h3><p>Press the <span class="ui">Mode</span> button and choose <span class="ui">Access Point</span>.</p></li>
-            <li><h3>Give it a name and password</h3><p>Enter a <span class="ui">Name</span> of 1–32 characters and a <span class="ui">Password</span> of 8–63 characters.</p></li>
-            <li><h3>Choose an upstream (optional)</h3><p>To share the internet, plug in an Ethernet cable and pick it as the <span class="ui">Upstream</span>. Leave it as <span class="ui">None</span> for a private network.</p></li>
-            <li><h3>Press Start</h3><p>The status shows <span class="ui">Active</span> and the <span class="ui">Clients</span> list fills as devices join. The hotspot's address is <code>192.168.4.1</code>.</p></li>
-          </ol>
-        </div>
       </div>
     </section>
   </main>

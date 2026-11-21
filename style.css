@@ -74,29 +74,18 @@ h1 span { background: linear-gradient(90deg, var(--accent), var(--accent-2)); -w
 }
 .btn.primary:hover { box-shadow: 0 12px 36px rgba(124, 196, 255, .45); }
 
-/* Desktop mock built from real app screenshots */
-.desktop {
-  position: relative;
-  margin: 56px auto 0;
+/* Screenshot */
+.screenshot {
+  display: block;
+  width: 100%;
   max-width: 920px;
-  aspect-ratio: 16 / 9;
+  height: auto;
+  margin: 56px auto 0;
   border-radius: 18px 18px 0 0;
   border: 1px solid var(--border);
   border-bottom: none;
-  background: #000 url("assets/seashore.jpg") center / cover;
   box-shadow: 0 -10px 80px rgba(124, 196, 255, .15), 0 30px 80px rgba(0, 0, 0, .5);
 }
-.desktop img {
-  position: absolute;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, .55);
-  border: 1px solid rgba(255, 255, 255, .12);
-}
-.desktop .w1 { width: 40%; left: 4%;  top: 8%; }
-.desktop .w2 { width: 38%; left: 30%; top: 38%; z-index: 2; }
-.desktop .w3 { width: 36%; right: 3%; top: 6%; z-index: 1; }
-.desktop .w4 { width: 30%; right: 8%; bottom: 4%; z-index: 3; }
 
 /* Sections */
 section { padding: 84px 0; }
