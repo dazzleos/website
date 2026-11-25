@@ -245,12 +245,15 @@ class Remote:
             self.get("/key", key=code, pressed=1 if pressed else 0)
 
     def type(self, text):
-        # In pieces; each is typed whole or not at all (503: the keys
-        # typed before are still going in), so try again.
-        for i in range(0, len(text), 40):
+        # In pieces, a little apart (a slower computer's apps drop keys
+        # that come faster than they draw); each is typed whole or not at
+        # all (503: the keys typed before are still going in), so try
+        # again.
+        for i in range(0, len(text), 8):
+            time.sleep(0.15)
             for _ in range(100):
                 try:
-                    self.get("/type", text=text[i:i + 40])
+                    self.get("/type", text=text[i:i + 8])
                     break
                 except urllib.error.HTTPError as e:
                     if e.code != 503:
